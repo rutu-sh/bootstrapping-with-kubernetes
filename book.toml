@@ -1,0 +1,6 @@
+[book]
+authors = ["rutu-sh"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Bootstrapping With Kubernetes"
