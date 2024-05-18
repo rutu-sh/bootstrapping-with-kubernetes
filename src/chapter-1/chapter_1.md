@@ -1,1 +1,4 @@
-# Chapter 1: Pods, Services, Deployments, and More
+# Concepts
+
+We cover the following concepts in this chapter:
+

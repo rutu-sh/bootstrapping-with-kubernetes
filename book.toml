@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Bootstrapping With Kubernetes"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "light"
