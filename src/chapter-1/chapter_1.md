@@ -1,4 +1,3 @@
 # Concepts
 
-We cover the following concepts in this chapter:
-
+We cover the basic concepts of Kubernetes in this chapter. 
