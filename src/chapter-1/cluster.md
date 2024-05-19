@@ -1,4 +1,4 @@
-# Cluster
+# Cluster and Kubernetes
 
 ## What is a Cluster?
 
