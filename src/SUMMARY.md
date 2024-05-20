@@ -12,6 +12,9 @@
     - [Quick Recap](./chapter-1/quick_recap.md)
     - [Architecture](./chapter-1/architecture.md)
     - [Architecture - Behind the Scenes](./chapter-1/architecture_bts.md)
+- [Installation and Setup](./chapter-2/chapter_2.md)
+    - [Minikube](./chapter-2/minikube.md)
+    - [A local Kubernetes setup from scratch](./chapter-2/local_k8s_setup.md)
 <!-- # Advanced Usage I:  -->
 
 ---

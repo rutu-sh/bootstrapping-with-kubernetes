@@ -39,7 +39,7 @@ The following components run on all worker nodes in the cluster, these are the c
 ![](./assets/k8s_example_scenario_1.drawio.svg)
 
 
-*It must be noted that you can run the data plane components on the Master Node as well.*
+*It must be noted that you can run the data plane components on the Master Node as well. I'm not showing that for the sake of simplicity.*
 
 <br>
 
@@ -191,12 +191,12 @@ kubectl apply -f backend-service.yaml
 
 Behind the scenes, the following happens (I've mentioned `etcd` and `API Server` a lot, just to highlight the importance of these components):
 
-1. In `node-1`, `kubectl` serializes the YAML files into a JSON payload and sends it to the API Server. So, all the files, `frontend-deployment.yaml`, `backend-deployment.yaml`, and `backend-service.yaml` are sent to the API Server by `kubectl` after converting them to JSON.
-2. The API Server in `node-1` receives the payload and processes it. It validates the specification and writes the data to the `etcd`. Each of our specifications for the frontend deployment, backend deployment, and backend service are stored in the `etcd`. *The API Server is the only component that directly interacts with the `etcd`*.
-3. In `node-1`, the Controller Manager, specifically the `Deployment Controller`, see the new deployment specifications in the `etcd` (via the API Server). Then it creates/updates the Replica Sets in `etcd` (via API Server) for the frontend and backend deployments, which defines how many replicas of the pods should be running at any given time. The `Replica Set Controller` (another controller) watches the Replica Sets sees that there are no pods running for the frontend and the backend deployments. It then creates the pod specifications in the `etcd` (via the API Server).
-4. The Scheduler in `node-1` sees the new pod specifications in the `etcd`. It then assigns the pods to the worker nodes. In this case, let's say, it assignes two frontend pods to `node-2` and one to `node-3`. And one backend pod to `node-2` and two to `node-3`.
-5. The Kubelet in `node-2` and `node-3` sees the new pod specifications in the `etcd` (via API Server). It then creates the containers for the pods. Running the containers is the job of the container runtime. The Kubelet interacts with the container runtime to create the containers.
-5. The Kube Proxy in `node-2` and `node-3` sees the new service specification in the `etcd` (via API Server). It then configures the network rules in the node to route the traffic to the backend pods, which basically involves setting up the iptables rules.
+1. In `node-1`, `kubectl` serializes the YAML files into a JSON payload and sends it to the **API Server**. So, all the files, `frontend-deployment.yaml`, `backend-deployment.yaml`, and `backend-service.yaml` are sent to the API Server by `kubectl` after converting them to JSON.
+2. The **API Server** in `node-1` receives the payload and processes it. It validates the specification and writes the data to the `etcd`. Each of our specifications for the frontend deployment, backend deployment, and backend service are stored in the `etcd`. *The API Server is the only component that directly interacts with the `etcd`*.
+3. In `node-1`, the **Controller Manager**, specifically the `Deployment Controller`, sees the new deployment specifications in the `etcd` (via the API Server). Then it creates/updates the Replica Sets in `etcd` (via API Server) for the frontend and backend deployments, which defines how many replicas of the pods should be running at any given time. The `Replica Set Controller` (another controller) watches the Replica Sets sees that there are no pods running for the frontend and the backend deployments. It then creates the pod specifications in the `etcd` (via the API Server).
+4. The **Scheduler** in `node-1` sees the new pod specifications in the `etcd`. It then assigns the pods to the worker nodes. In this case, let's say, it assignes two frontend pods to `node-2` and one to `node-3`. And one backend pod to `node-2` and two to `node-3`.
+5. The **Kubelet** in `node-2` and `node-3` sees the new pod specifications in the `etcd` (via API Server). It then creates the containers for the pods. Running the containers is the job of the container runtime. The Kubelet interacts with the container runtime to create the containers.
+5. The **Kube Proxy** in `node-2` and `node-3` sees the new service specification in the `etcd` (via API Server). It then configures the network rules in the node to route the traffic to the backend pods, which basically involves setting up the iptables rules.
 
 And that's how everything comes together behind the scenes.
 
