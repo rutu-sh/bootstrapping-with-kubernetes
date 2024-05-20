@@ -11,6 +11,7 @@
     - [Deployments](./chapter-1/deployments.md)
     - [Quick Recap](./chapter-1/quick_recap.md)
     - [Architecture](./chapter-1/architecture.md)
+    - [Architecture - Behind the Scenes](./chapter-1/architecture_bts.md)
 <!-- # Advanced Usage I:  -->
 
 ---
