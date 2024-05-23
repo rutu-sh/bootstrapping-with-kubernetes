@@ -12,7 +12,7 @@ This is one of the most interesting experiments I've done with Kubernetes. I had
 
 I followed the official Docker documentation [here](https://docs.docker.com/engine/install/ubuntu/). Here are some points to note to ease the process:
 
-1. If the apt-get update fails with an error in reading from the docker.list file, make sure that the url ends with `ubuntu` and not with `debian`. 
+1. If the `apt-get update` fails with an error in reading from the `docker.list` file, make sure that the url in the file ends with `ubuntu` and not with `debian`. 
 2. Follow the [post installation instructions](https://docs.docker.com/engine/install/linux-postinstall/) to run Docker as a non-root user. Restart the machine after this step, you'll be able to run Docker commands without `sudo`.
 
 ### Install CRI-Dockerd on all machines
@@ -97,4 +97,4 @@ This will show the master node and the worker nodes.
 
 And that's it! We have a Kubernetes cluster up and running from scratch. You can now deploy applications to this cluster and experiment with Kubernetes.
 
-From now on, I'll be using this setup to demonstrate various Kubernetes concepts.
+From now on, I'll be using this setup to demonstrate various Kubernetes concepts, but you can use the three node Minikube cluster as mentioned [here](minikube.md) to simulate this setup. 
