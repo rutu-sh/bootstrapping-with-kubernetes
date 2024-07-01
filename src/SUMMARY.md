@@ -29,4 +29,10 @@
 
 ---
 
-<!-- [References](./references/references.md) -->
+# Supplementary
+
+- [Developing Applications](./supplementary/developing-applications/developing_applications.md)
+    - [Controller Service Repository Pattern](./supplementary/developing-applications/controller_service_repository_pattern.md)
+    - [Building a Python FastAPI application](./supplementary/developing-applications/building_fastapi_app.md)
+    - [Building a Go application](./supplementary/developing-applications/building_go_app.md)
+
