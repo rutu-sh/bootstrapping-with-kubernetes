@@ -18,26 +18,26 @@ Here is how you would structure your code in the Controller Service Repository p
 ├── docs
 │   └── README.md
 └── src
-|    ├── common
-|    │   ├── __init__.py
-|    │   ├── common.py
-|    │   └── config.py
-|    ├── controller
-|    │   ├── __init__.py
-|    │   ├── health_check_controller.py
-|    │   └── user_controller.py
-|    ├── models
-|    │   ├── __init__.py
-|    │   ├── errors.py
-|    │   └── models.py
-|    ├── repository
-|    │   ├── __init__.py
-|    │   ├── db_common.py
-|    │   └── user_repository.py
-|    ├── service
-|    │   ├── __init__.py
-|    │   └── user_service.py 
-|    └── main.py
+│    ├── common
+│    │   ├── __init__.py
+│    │   ├── common.py
+│    │   └── config.py
+│    ├── controller
+│    │   ├── __init__.py
+│    │   ├── health_check_controller.py
+│    │   └── user_controller.py
+│    ├── models
+│    │   ├── __init__.py
+│    │   ├── errors.py
+│    │   └── models.py
+│    ├── repository
+│    │   ├── __init__.py
+│    │   ├── db_common.py
+│    │   └── user_repository.py
+│    ├── service
+│    │   ├── __init__.py
+│    │   └── user_service.py 
+│    └── main.py
 └── Makefile
 ```
 

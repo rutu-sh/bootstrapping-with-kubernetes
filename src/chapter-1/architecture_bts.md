@@ -1,6 +1,6 @@
 # Architecture - Behind the Scenes
 
-We have gone through the high-level architecture of Kubernetes. And we've learned what's the purpose of each component in the architecture. Now let's get a bit deeper and understand how everything comes together behind the scenes. 
+We have gone through the high-level architecture of Kubernetes. And we've learned what's the purpose of each component in the architecture. Now let's go a bit deeper and understand how everything comes together behind the scenes. 
 
 I'm taking the following scenario and show you how it'll work in the background. 
 

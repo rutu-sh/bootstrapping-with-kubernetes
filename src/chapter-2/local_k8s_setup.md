@@ -29,13 +29,13 @@ sudo dpkg -i <deb-file-name>
 4. After the installation is complete, run 
 
 ```bash
-sudo systemctl enable cri-dockerd
-sudo systemctl start cri-dockerd
+sudo systemctl enable cri-docker
+sudo systemctl start cri-docker
 ```
 5. Verify the installation by running 
 
 ```bash
-sudo systemctl status cri-dockerd
+sudo systemctl status cri-docker
 ```
 
 
@@ -85,7 +85,7 @@ This will print the join command. Copy this command.
 
 ## Setting up the Worker Nodes
 
-1. Run the join command on the worker nodes. This will join the worker nodes to the master node.
+1. Add the parameter `--cri-socket=unix:///var/run/cri-dockerd.sock` to the join command and run it on the worker nodes with sudo. This will join the worker nodes to the master node.
 2. Verify that the worker nodes have joined the cluster by running 
 
 ```bash
@@ -93,6 +93,14 @@ kubectl get nodes
 ```
 
 This will show the master node and the worker nodes.
+
+```shell
+$ kubectl get nodes
+NAME      STATUS   ROLES           AGE     VERSION
+master    Ready    control-plane   4h3m    v1.30.2
+worker1   Ready    <none>          3h53m   v1.30.2
+worker2   Ready    <none>          3h52m   v1.30.2
+```
 
 
 And that's it! We have a Kubernetes cluster up and running from scratch. You can now deploy applications to this cluster and experiment with Kubernetes.
