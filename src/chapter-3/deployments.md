@@ -43,7 +43,7 @@ spec:
             memory: 200Mi
 ```
 
-To create the Deployment, run the following command:
+Create the Deployment by running the following command:
 
 ```bash
 kubectl apply -f deployment.yaml

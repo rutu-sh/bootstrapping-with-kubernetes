@@ -1,6 +1,6 @@
 # Services
 
-Services allow pods to communicate with each other. 
+Services is how any communication to a pod is done in Kubernetes. 
 
 ## Why do we need services?
 
