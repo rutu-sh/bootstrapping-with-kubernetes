@@ -19,20 +19,26 @@ I followed the official Docker documentation [here](https://docs.docker.com/engi
 
 This is a Kubernetes requirement. It's important to have the Container Runtime Interface (CRI) installed on all machines. I used the following method to install CRI-Dockerd:
 
-1. Go to [this page](https://github.com/Mirantis/cri-dockerd/releases). 
-2. Expand the Assets section and download the `cri-dockerd` deb file for your OS version. I went with `cri-dockerd_0.3.14.3-0.ubuntu-jammy_amd64.deb`. 
-3. Open the Terminal and `cd` to the directory where the downloaded file is present and run 
+1. Open the Terminal and run the following command to download the `deb` package:
 
 ```bash
-sudo dpkg -i <deb-file-name>
+wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.14/cri-dockerd_0.3.14.3-0.ubuntu-jammy_amd64.deb
 ```
-4. After the installation is complete, run 
+
+2. Install the package by running
+
+```bash
+sudo dpkg -i  cri-dockerd_0.3.14.3-0.ubuntu-jammy_amd64.deb
+```
+
+3. After the installation is complete, run 
 
 ```bash
 sudo systemctl enable cri-docker
 sudo systemctl start cri-docker
 ```
-5. Verify the installation by running 
+
+4. Verify the installation by running 
 
 ```bash
 sudo systemctl status cri-docker
