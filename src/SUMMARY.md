@@ -22,7 +22,7 @@
     - [Declarative vs. Imperative object management](./chapter-3/declarative_vs_imperative.md)
     - [Kube System Components](./chapter-3/kube_system_components.md)
         - [kube-dns](./chapter-3/kube-system/kube-dns.md)
-        - [etcd]()
+        - [etcd](./chapter-3/kube-system/etcd.md)
         - [kube-apiserver]()
         - [kube-controller-manager]()
         - [kube-proxy]()
