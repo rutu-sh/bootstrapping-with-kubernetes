@@ -23,7 +23,7 @@
     - [Kube System Components](./chapter-3/kube_system_components.md)
         - [kube-dns](./chapter-3/kube-system/kube-dns.md)
         - [etcd](./chapter-3/kube-system/etcd.md)
-        - [kube-apiserver]()
+        - [kube-apiserver](./chapter-3/kube-system/kube-apiserver.md)
         - [kube-controller-manager]()
         - [kube-proxy]()
         - [kube-scheduler]()
