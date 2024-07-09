@@ -25,8 +25,8 @@
         - [etcd](./chapter-3/kube-system/etcd.md)
         - [kube-apiserver](./chapter-3/kube-system/kube-apiserver.md)
         - [kube-controller-manager](./chapter-3/kube-system/kube-controller-manager.md)
-        - [kube-proxy]()
-        - [kube-scheduler]()
+        - [kube-proxy](./chapter-3/kube-system/kube-proxy.md)
+        - [kube-scheduler](./chapter-3/kube-system/kube-scheduler.md)
     - [Workloads](./chapter-3/workloads.md)
         - [Pods](./chapter-3/pods.md)
             - [Pods - A deeper dive]()
@@ -82,12 +82,26 @@
 
 <!-- 
 
-# MLOps with Kubernetes
+# Advanced Usage II:
 
-# Observability with Kubernetes
+# Service Mesh
+    ## Istio
 
-# Security with Kubernetes 
+# Serverless
+    ## Knative
 
+# MLOps
+    ## Kubeflow
+    ## MLflow
+
+# Observability and Monitoring
+    ## Prometheus
+    ## OpenTelemetry
+    ## Grafana
+
+# Event-Driven Architecture
+    ## Kafka
+    ## TriggerMesh
 -->
 
 ---

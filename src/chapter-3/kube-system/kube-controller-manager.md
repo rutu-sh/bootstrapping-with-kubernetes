@@ -38,4 +38,5 @@ I0709 13:30:40.595865       1 replica_set.go:676] "Finished syncing" logger="rep
 I0709 13:30:40.609762       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/simple-deployment-794f78c89" duration="63.266µs"
 ```
 
-It shows that the **replicaset-controller** is syncing the **ReplicaSet** `simple-deployment-794f78c89` with the desired state.
+From this, you can see that the **replicaset-controller** is hitting the **kube-apiserver** to sync the state of the **ReplicaSet**.
+
