@@ -1,6 +1,6 @@
 # etcd
 
-This component is the distributed key-value store used by Kubernetes to store all cluster data. 
+This component is the distributed key-value store used by Kubernetes to store all cluster data. [etcd](https://etcd.io/) is a consistent and highly-available key-value store used as Kubernetes' backing store for all cluster data. 
 
 Run the following command to check the status of the etcd cluster:
 
@@ -108,4 +108,6 @@ sh-5.2# etcdctl get /registry/pods/ --prefix --keys-only
 
 sh-5.2# 
 ```
+
+Here, we can see the keys created for the resources like `services` and `pods` in the etcd. This component is crucial for the functioning of the Kubernetes cluster. Since every component in Kubernetes is stateless, the etcd provides a way to store the state of the cluster. 
 

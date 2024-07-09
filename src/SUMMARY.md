@@ -24,7 +24,7 @@
         - [kube-dns](./chapter-3/kube-system/kube-dns.md)
         - [etcd](./chapter-3/kube-system/etcd.md)
         - [kube-apiserver](./chapter-3/kube-system/kube-apiserver.md)
-        - [kube-controller-manager]()
+        - [kube-controller-manager](./chapter-3/kube-system/kube-controller-manager.md)
         - [kube-proxy]()
         - [kube-scheduler]()
     - [Workloads](./chapter-3/workloads.md)
@@ -32,13 +32,13 @@
             - [Pods - A deeper dive]()
         - [Replica Sets](./chapter-3/replica_sets.md)
         - [Deployments](./chapter-3/deployments.md)
-        - [Jobs]()
-        - [StatefulSets]()
-        - [DaemonSets]() 
     - [Namespaces]()
     - [Networking](./chapter-3/networking.md)
         - [Services](./chapter-3/services.md)
-            - [Services - A deeper dive](./chapter-3/services_deeper_dive.md)
+            - [ClusterIP Service](./chapter-3/services/clusterip.md)
+            - [NodePort Service](./chapter-3/services/nodeport.md)
+            - [Using Port Names](./chapter-3/services/port_names.md)
+            - [Services - A deeper dive](./chapter-3/services/services_deeper_dive.md)
     - [Configuration]()
         - [ConfigMaps]()
         - [Secrets]()
@@ -49,9 +49,46 @@
 
 # Kubernetes Intermediate
 
-- [Ingress]() 
+- [Workloads]()
+    - [Jobs]()
+    - [CronJobs]()
+    - [StatefulSets]()
+    - [DaemonSets]()
+    - [Horizontal Pod Autoscaler]()
+- [Networking]()
+    - [Ingress]() 
+    - [Gateway API]()
+<!-- - [Access Control]()
+    - [RBAC]()
+    - [Service Accounts]()
+- [Fault Tolerance]()
+    - [Liveness and Readiness Probes]()
+    - [Pod Disruption Budgets]()
+- [Monitoring and Logging]()
+    - [Metrics Server]()
+    - [Prometheus]()
+    - [Grafana]()
+    - [Elasticsearch]()
+    - [Fluentd]()
+    - [Kibana]() -->
  
-<!-- # Advanced Usage I:  -->
+<!-- # Advanced Usage I:  
+
+- [Custom Resource Definitions]()
+- [Operators]() 
+- [Helm]() 
+
+-->
+
+<!-- 
+
+# MLOps with Kubernetes
+
+# Observability with Kubernetes
+
+# Security with Kubernetes 
+
+-->
 
 ---
 

@@ -67,7 +67,7 @@ The data plane is where the actual work happens. It mainly consists of nodes whi
 
 ### 1. Kubelet
 
-The [Kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) runs as a [service](https://lym.readthedocs.io/en/latest/services.html) on each node. This is responsible for registering the node with the API Server, and managing the containers within the node. It must be noted that the Kubelet only manages the containers that are created through Kubernetes, so any other containers on your nodes that are not managed by Kubernetes are not managed by the Kubelet.
+The [Kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) runs as a [linux service](https://lym.readthedocs.io/en/latest/services.html) on each node. This is responsible for registering the node with the API Server, and managing the containers within the node. It must be noted that the Kubelet only manages the containers that are created through Kubernetes, so any other containers on your nodes that are not managed by Kubernetes are not managed by the Kubelet.
 
 ### 2. Kube Proxy
 
