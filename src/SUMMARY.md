@@ -29,7 +29,7 @@
         - [kube-scheduler](./chapter-3/kube-system/kube-scheduler.md)
     - [Workloads](./chapter-3/workloads.md)
         - [Pods](./chapter-3/pods.md)
-            - [Pods - A deeper dive]()
+            - [Pods - A deeper dive](./chapter-3/pods_deeper_dive.md)
         - [Replica Sets](./chapter-3/replica_sets.md)
         - [Deployments](./chapter-3/deployments.md)
     - [Namespaces]()
