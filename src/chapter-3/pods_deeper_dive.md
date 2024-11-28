@@ -460,3 +460,11 @@ As discussed earlier, the worker containers share the network namespace of the p
 The `Config` section contains the configuration of the container. It contains the details like environment variables, command, health check, image, etc. The `Labels` field contains the associated labels of the container, which are used by Kubelet to manage the lifecycle of the container. 
 
 The `NetworkSettings` section contains the details of the network configuration of the container. It contains details like the IP address, MAC address, and the network namespace of the container. Since this container shares the network namespace of the pause container, the IP address and MAC address are not assigned to the container but are specified in the pause (sandbox) container.
+
+## Conclusion
+
+On inspecting the Pod we can observe that the pod is more than just a container. It has a lot of configurations and settings that are automatically managed by Kubernetes. From the network configuration to the filesystem, Kubernetes manages everything for the pod. This allows more flexibility and scalability in managing the containers. Imagine managing all these configurations manually for each container, it would be a nightmare. Kubernetes abstracts all these complexities and provides a simple interface to manage the containers.
+
+## Summary
+
+In this chapter, we took a deeper dive and understood how a pod is configured and managed by Kubernetes. We inspected the internals of the pod and understood how the network configuration, filesystem, and lifecycle of the pod are managed. We also understood how the pod interacts with the Kubernetes API server.
