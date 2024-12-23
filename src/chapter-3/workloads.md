@@ -1,7 +1,3 @@
 # Workloads
 
-We'll cover the following workloads in this chapter:
-
-1. [Pods](./pods.md)
-2. [Replica Sets](./replica_sets.md)
-3. [Deployments](./deployments.md)
+In Kubernetes, workloads are the applications that run on the cluster. A workload is a compute job that is implemented using containers. Depending on the usecase, the workload can be short-lived, long-running, batch job, or more. Kubernetes provides ways to manage these workloads without the user having to worry about the underlying infrastructure. We will discuss the different types of workloads that Kubernetes supports, starting with the most basic one, the `Pod`. Then we will look at how a pod is configured by Kubernetes. 

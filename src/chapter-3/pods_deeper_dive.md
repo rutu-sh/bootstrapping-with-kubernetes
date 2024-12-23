@@ -2,6 +2,8 @@
 
 In this chapter, we'll take a deeper look into pods by inspecting the internals of a pod. We'll explore the configuration of the pod's container, the network configuration, and the filesystem of the pod. Next, we'll look at the lifecycle of a pod and how it interacts with the Kubernetes API server. 
 
+> **Note**: This chapter is only inteded for a deeper understanding of Kubernetes, can be skipped.
+
 ## Launch a pod 
 
 Navigate to the `simple-pod` directory: 
@@ -460,6 +462,14 @@ As discussed earlier, the worker containers share the network namespace of the p
 The `Config` section contains the configuration of the container. It contains the details like environment variables, command, health check, image, etc. The `Labels` field contains the associated labels of the container, which are used by Kubelet to manage the lifecycle of the container. 
 
 The `NetworkSettings` section contains the details of the network configuration of the container. It contains details like the IP address, MAC address, and the network namespace of the container. Since this container shares the network namespace of the pause container, the IP address and MAC address are not assigned to the container but are specified in the pause (sandbox) container.
+
+## Cleaning up
+
+Delete the pod by running the following command:
+
+```shell
+kubectl delete -f pod.yaml
+```
 
 ## Conclusion
 
